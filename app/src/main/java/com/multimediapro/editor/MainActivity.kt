@@ -1,5 +1,3 @@
-cd ~/MultimediaPro
-nano app/src/main/java/com/multimediapro/editor/MainActivity.kt
 
 package com.multimediapro.editor
 

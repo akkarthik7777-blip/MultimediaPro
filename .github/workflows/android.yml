@@ -1,4 +1,5 @@
-
+mkdir -p .github/workflows
+cat > .github/workflows/android.yml << 'EOF'
 name: Build Multimedia Pro
 
 on:
@@ -23,10 +24,9 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK and accept license
+      - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-        with:
-             accept-android-sdk-license:'true'
+
       - name: Install Android SDK packages
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
@@ -44,3 +44,4 @@ jobs:
           name: Multimedia-Pro-debug-APK
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+EOF
