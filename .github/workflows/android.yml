@@ -1,5 +1,3 @@
-mkdir -p .github/workflows
-cat > .github/workflows/android.yml << 'EOF'
 name: Build Multimedia Pro
 
 on:
@@ -44,4 +42,3 @@ jobs:
           name: Multimedia-Pro-debug-APK
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-EOF
